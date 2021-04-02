@@ -1,6 +1,16 @@
 <template>
   <div class="home">
-    <div>
+    <div class="jumbotron">
+      <h1 class="display-4">Movies</h1>
+      <p class="lead">You watch em, I watch em. Lot's of other people too, probably.</p>
+      <hr class="my-4" />
+      <p>Do it with popcorn, ya dingus.</p>
+      <router-link v-bind:to="`/movies`">
+        <button class="btn btn-primary btn-lg">Sure, yeah, movies</button>
+      </router-link>
+    </div>
+
+    <!-- <div>
       <h1>Create A New Movie!</h1>
       <p>Title:</p>
       <input type="text" v-model="movieTitle" />
@@ -14,9 +24,9 @@
       <input type="checkbox" v-model="movieEnglish" true-value="true" false-value="false" />
       <br />
       <button v-on:click="createMovie()">Create!!!</button>
-    </div>
+    </div> -->
 
-    <div v-for="movie in movies" v-bind:key="movie.id">
+    <!-- <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>{{ movie.title }}</h2>
       <button v-on:click="showMovie(movie)">More Info</button>
 
@@ -48,9 +58,9 @@
           <button v-on:click="destroyMovie(currentMovie)">Yes</button>
           <button>No</button>
         </form>
-      </dialog>
+      </dialog> -->
 
-      <!-- <dialog id="movie-create-form">
+    <!-- <dialog id="movie-create-form">
         <form method="dialog">
           <p>Title:</p>
           <input type="text" v-model="movieTitle" />
@@ -66,7 +76,7 @@
           <button>Nevermind.</button>
         </form>
       </dialog> -->
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
