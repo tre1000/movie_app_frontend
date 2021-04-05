@@ -25,9 +25,9 @@
       </div>
       <div class="form-group">
         <label>Plot:</label>
-        <input type="text" class="form-control" v-model="plot" />
+        <textarea type="text" class="form-control" v-model="plot" maxlength="200" />
+        <small v-if="plot.length > 0 && plot.length < 200">{{ plot.length - 200 }} characters left</small>
       </div>
-      <!-- this button isn't doing anything for whatever reason. -->
       <input type="submit" class="btn btn-primary" value="Submit" />
     </form>
   </div>

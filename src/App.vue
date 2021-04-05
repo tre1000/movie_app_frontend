@@ -44,16 +44,18 @@
               Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <router-link to="/signup" class="dropdown-item">Sign up</router-link>
-              <router-link to="/login" class="dropdown-item">Log in</router-link>
+              <router-link to="/signup" class="dropdown-item" v-if="!isLoggedIn()">Sign up</router-link>
+              <router-link to="/login" class="dropdown-item" v-if="!isLoggedIn()">Log in</router-link>
               <div class="dropdown-divider"></div>
-              <router-link to="/logout" class="dropdown-item">Log out</router-link>
+              <router-link to="/logout" class="dropdown-item" v-if="isLoggedIn()">Log out</router-link>
             </div>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <router-link v-bind:to="`/movies/search`">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </router-link>
         </form>
       </div>
     </nav>
@@ -83,3 +85,15 @@
   color: #42b983;
 }
 </style>
+
+<script>
+import Vue2Filters from "vue2-filters";
+export default {
+  mixins: [Vue2Filters.mixin],
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt");
+    },
+  },
+};
+</script>
