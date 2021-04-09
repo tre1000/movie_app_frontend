@@ -9,6 +9,7 @@ import NewMovie from "../views/NewMovie.vue";
 import ShowMovies from "../views/ShowMovies.vue";
 import EditMovie from "../views/EditMovie.vue";
 import SearchMovies from "../views/SearchMovies.vue";
+import HTMLStuff from "../views/HTMLStuff.vue";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,7 @@ const routes = [
   { path: "/movies/search", name: "SearchMovies", component: SearchMovies },
   { path: "/movies/:id", name: "ShowMovies", component: ShowMovies },
   { path: "/movies/:id/edit", name: "EditMovie", component: EditMovie },
+  { path: "/html_stuff", name: "HTMLStuff", component: HTMLStuff },
 ];
 
 const router = new VueRouter({

@@ -31,6 +31,9 @@
           <li class="nav-item active">
             <router-link to="/movies" class="nav-link">Movies</router-link>
           </li>
+          <li class="nav-item active">
+            <router-link to="/html_stuff" class="nav-link">HTML Stuff</router-link>
+          </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"

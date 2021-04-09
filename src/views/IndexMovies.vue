@@ -4,15 +4,15 @@
       <button class="btn btn-outline-primary">Create a new movie</button>
     </router-link>
 
-    <div>
+    <!-- <div>
       <button v-on:click="orderBy('title')">Sort Alphabetically</button>
       <button v-on:click="log()">log</button>
-    </div>
+    </div> -->
 
-    <input v-model="titleFilter" placeholder="search" list="titles" />
+    <!-- <input v-model="titleFilter" placeholder="search" list="titles" />
     <datalist id="titles">
       <option v-for="movie in movies" v-bind:key="movie.id">{{ movie.title }}</option>
-    </datalist>
+    </datalist> -->
 
     <!-- <div v-for="movie in filterBy(movies, titleFilter, 'title')" v-bind:key="movie.id">
       <div v-if="titleFilter !== ''">
